@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot arm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0171904098697754 0.0489151878379895 -0.0171903458272483"
+        rpy="0 0 0" />
+      <mass
+        value="8.99461872087091" />
+      <inertia
+        ixx="0.0745273190041222"
+        ixy="-0.000610751489417349"
+        ixz="-0.0101258228667901"
+        iyy="0.133451502840899"
+        iyz="-0.000610759772710734"
+        izz="0.0745274374965118" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link 1">
+    <inertial>
+      <origin
+        xyz="0.0127233434012177 0.132318028565164 0.02390971709017"
+        rpy="0 0 0" />
+      <mass
+        value="4.32830168294141" />
+      <inertia
+        ixx="0.0561236183944775"
+        ixy="-0.000873461437499454"
+        ixz="-0.0016077692802286"
+        iyy="0.0359600992914917"
+        iyz="-0.0084651504662221"
+        izz="0.0252934094224277" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint 0"
+    type="revolute">
+    <origin
+      xyz="0 0 0.085"
+      rpy="1.5708 0 -0.90639" />
+    <parent
+      link="base_link" />
+    <child
+      link="link 1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder suport">
+    <inertial>
+      <origin
+        xyz="0.0510471636005361 2.1281658463268E-07 -0.0571089773996209"
+        rpy="0 0 0" />
+      <mass
+        value="0.535252647801759" />
+      <inertia
+        ixx="0.0018297393688592"
+        ixy="3.5623412317329E-10"
+        ixz="1.25413102350521E-09"
+        iyy="0.00196590344541013"
+        iyz="-3.77517525289536E-09"
+        izz="0.000354417356368292" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/cylinder suport.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/cylinder suport.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cy sup joint"
+    type="revolute">
+    <origin
+      xyz="0 0.19313 -0.17829"
+      rpy="-2.7036 0 -3.1416" />
+    <parent
+      link="link 1" />
+    <child
+      link="cylinder suport" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylinder">
+    <inertial>
+      <origin
+        xyz="0.101773032186435 9.7648180041876E-08 -1.18473597182644E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0608147218897255" />
+      <inertia
+        ixx="4.27076812708545E-06"
+        ixy="-3.74883013367531E-10"
+        ixz="2.44523496477619E-11"
+        iyy="0.000186634745646111"
+        iyz="-8.58832964123414E-11"
+        izz="0.000185609788208117" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/cylinder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/cylinder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinder"
+    type="fixed">
+    <origin
+      xyz="0.055 0 -0.091943"
+      rpy="1.0637 1.5708 1.1193" />
+    <parent
+      link="cylinder suport" />
+    <child
+      link="cylinder" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link 2">
+    <inertial>
+      <origin
+        xyz="-0.129410399221603 0.000911482951469506 0.0380663627009094"
+        rpy="0 0 0" />
+      <mass
+        value="3.40305462633839" />
+      <inertia
+        ixx="0.00746868530684131"
+        ixy="-0.000123909982463174"
+        ixz="0.0082851650477102"
+        iyy="0.0793046529220879"
+        iyz="-6.8029821689429E-05"
+        izz="0.0771955311735992" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.698039215686274 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint 1"
+    type="revolute">
+    <origin
+      xyz="0 0.23119 0.14784"
+      rpy="1.5708 -0.2023 -1.5708" />
+    <parent
+      link="link 1" />
+    <child
+      link="link 2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link 3">
+    <inertial>
+      <origin
+        xyz="-0.0150277181697502 0.0507551215220864 -0.0175805752729395"
+        rpy="0 0 0" />
+      <mass
+        value="2.65200213548551" />
+      <inertia
+        ixx="0.00515320303990088"
+        ixy="-0.000215442871581433"
+        ixz="5.59911119914947E-05"
+        iyy="0.00914740031089903"
+        iyz="0.00097980285676869"
+        izz="0.00964516845252098" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint 2"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0.75537" />
+    <parent
+      link="link 2" />
+    <child
+      link="link 3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link 4">
+    <inertial>
+      <origin
+        xyz="0.36221285063615 4.24167674317744E-08 -0.00524245695161452"
+        rpy="0 0 0" />
+      <mass
+        value="2.46624303412002" />
+      <inertia
+        ixx="0.00363520534443675"
+        ixy="3.10351138017861E-08"
+        ixz="2.12239329087807E-06"
+        iyy="0.0366666794074096"
+        iyz="1.00443812720355E-08"
+        izz="0.0354846021720409" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint 3"
+    type="revolute">
+    <origin
+      xyz="0 0.055 -0.025044"
+      rpy="-0.20369 0 0" />
+    <parent
+      link="link 3" />
+    <child
+      link="link 4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link 5">
+    <inertial>
+      <origin
+        xyz="1.83555480345876E-05 0.00919671847215786 0.0736774572973738"
+        rpy="0 0 0" />
+      <mass
+        value="1.08268596086829" />
+      <inertia
+        ixx="0.00274036479953486"
+        ixy="5.10718075778316E-08"
+        ixz="-5.96212776145938E-08"
+        iyy="0.00265362486664715"
+        iyz="-7.54557989010005E-05"
+        izz="0.00105604473946824" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint 5"
+    type="revolute">
+    <origin
+      xyz="0.50222 0 0"
+      rpy="1.3179 1.5708 0" />
+    <parent
+      link="link 4" />
+    <child
+      link="link 5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link 6">
+    <inertial>
+      <origin
+        xyz="0.0915324479319044 1.22358146947832E-08 4.69074946385373E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.263363218204542" />
+      <inertia
+        ixx="0.000244027440263407"
+        ixy="-3.23380618751134E-11"
+        ixz="-5.79784772404242E-10"
+        iyy="0.000225018776988952"
+        iyz="-9.50941440798795E-11"
+        izz="0.000225018563831659" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.698039215686274 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/link 6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint 6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.079089"
+      rpy="0.14322 -1.5708 0" />
+    <parent
+      link="link 5" />
+    <child
+      link="link 6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="actuator cylinder">
+    <inertial>
+      <origin
+        xyz="0.0744728613650499 1.86599228291229E-08 -5.42654834956302E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0353056804269599" />
+      <inertia
+        ixx="9.79686131803956E-06"
+        ixy="-1.35138597996888E-11"
+        ixz="1.67557593429125E-11"
+        iyy="1.72463238127013E-05"
+        iyz="1.30885955694486E-12"
+        izz="1.72463771612665E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator cylinder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.698039215686274 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator cylinder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ac cy joint"
+    type="prismatic">
+    <origin
+      xyz="0.0856 0 0"
+      rpy="0.5236 0 0" />
+    <parent
+      link="link 6" />
+    <child
+      link="actuator cylinder" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.022571"
+      upper="0.0024294"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="claw 1">
+    <inertial>
+      <origin
+        xyz="1.84471198713676E-06 0.0559838716797626 0.00340681964107686"
+        rpy="0 0 0" />
+      <mass
+        value="0.0632259923445696" />
+      <inertia
+        ixx="0.00010153846426203"
+        ixy="-3.01642704895574E-10"
+        ixz="-2.56139832279381E-10"
+        iyy="0.000107695411613541"
+        iyz="1.75263710491645E-06"
+        izz="1.6371664179607E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw joint 1"
+    type="revolute">
+    <origin
+      xyz="0.17085 -0.012198 0"
+      rpy="3.1051 -1.5708 0" />
+    <parent
+      link="actuator cylinder" />
+    <child
+      link="claw 1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="claw 2">
+    <inertial>
+      <origin
+        xyz="1.40496469461238E-06 0.0559834107691118 0.00340763672281857"
+        rpy="0 0 0" />
+      <mass
+        value="0.0632251249445557" />
+      <inertia
+        ixx="0.000101536612187904"
+        ixy="-1.48111955890169E-10"
+        ixz="-7.18540607580724E-10"
+        iyy="0.000107692457678153"
+        iyz="1.75253430519715E-06"
+        izz="1.63726147451791E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw joint 2"
+    type="revolute">
+    <origin
+      xyz="0.17085 0.0059428 -0.010654"
+      rpy="1.6073 0.5236 -1.5708" />
+    <parent
+      link="actuator cylinder" />
+    <child
+      link="claw 2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="claw 3">
+    <inertial>
+      <origin
+        xyz="0.0105668137070598 0.0376982264529908 0.0040753604786482"
+        rpy="0 0 0" />
+      <mass
+        value="0.0632272465915873" />
+      <inertia
+        ixx="0.000101537790879925"
+        ixy="5.5400757509235E-10"
+        ixz="7.55858106562275E-10"
+        iyy="0.000107693746637803"
+        iyz="1.75235676554037E-06"
+        izz="1.63723150441153E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw joint 3"
+    type="revolute">
+    <origin
+      xyz="0.17085 -0.012198 0"
+      rpy="-1.5343 0.5236 1.5708" />
+    <parent
+      link="actuator cylinder" />
+    <child
+      link="claw 3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="actuator support 1">
+    <inertial>
+      <origin
+        xyz="-0.0108690761422405 -2.36616282123236E-15 2.72004641033163E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00613342406430343" />
+      <inertia
+        ixx="1.35436020491356E-07"
+        ixy="-1.69778820726509E-21"
+        ixz="1.85288457211878E-22"
+        iyy="2.64283756339026E-06"
+        iyz="2.64697796016969E-23"
+        izz="2.62557058253601E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator support 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.698039215686274 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator support 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ac sup 1"
+    type="revolute">
+    <origin
+      xyz="0.15501 0.035171 0.020306"
+      rpy="2.6556 0.2031 -2.7769" />
+    <parent
+      link="link 6" />
+    <child
+      link="actuator support 1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="claw 1-1">
+    <inertial>
+      <origin
+        xyz="1.84471198712288E-06 0.0559838716797655 0.00340681964108064"
+        rpy="0 0 0" />
+      <mass
+        value="0.0632259923445697" />
+      <inertia
+        ixx="0.000101538464262031"
+        ixy="-3.01642704862964E-10"
+        ixz="-2.56139832419141E-10"
+        iyy="0.000107695411613541"
+        iyz="1.75263710491187E-06"
+        izz="1.63716641796074E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 1-1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 1-1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw joint 1-1"
+    type="revolute">
+    <origin
+      xyz="-0.071516 -0.089246 0"
+      rpy="0.37873 1.5708 0" />
+    <parent
+      link="actuator support 1" />
+    <child
+      link="claw 1-1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="actuator suport 2">
+    <inertial>
+      <origin
+        xyz="-0.0108690761422406 5.55111512312578E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00613342406430342" />
+      <inertia
+        ixx="1.35436020491355E-07"
+        ixy="6.88149646158763E-22"
+        ixz="-6.2056511270406E-21"
+        iyy="2.64283756339025E-06"
+        iyz="0"
+        izz="2.62557058253601E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator suport 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.698039215686274 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator suport 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ac sup 2"
+    type="revolute">
+    <origin
+      xyz="0.15501 -0.035171 0.020306"
+      rpy="0.48602 0.2031 2.7769" />
+    <parent
+      link="link 6" />
+    <child
+      link="actuator suport 2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="claw 2-1">
+    <inertial>
+      <origin
+        xyz="1.40496469455687E-06 0.0559834107691339 0.00340763672280697"
+        rpy="0 0 0" />
+      <mass
+        value="0.0632251249445555" />
+      <inertia
+        ixx="0.000101536612187903"
+        ixy="-1.48111955927438E-10"
+        ixz="-7.18540607702908E-10"
+        iyy="0.000107692457678153"
+        iyz="1.75253430519467E-06"
+        izz="1.63726147451782E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 2-1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 2-1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw joint 2-1"
+    type="revolute">
+    <origin
+      xyz="-0.071516 -0.089246 -0.0001806"
+      rpy="0.37873 1.5708 0" />
+    <parent
+      link="actuator suport 2" />
+    <child
+      link="claw 2-1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="actuator support 3">
+    <inertial>
+      <origin
+        xyz="-0.0108690761422407 2.22044604925031E-16 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00613342406430343" />
+      <inertia
+        ixx="1.35436020491356E-07"
+        ixy="-1.60142166590266E-21"
+        ixz="1.95214624562515E-22"
+        iyy="2.64283756339026E-06"
+        iyz="1.05879118406788E-22"
+        izz="2.62557058253602E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator support 3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.698039215686274 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/actuator support 3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ac sup 3"
+    type="revolute">
+    <origin
+      xyz="0.15501 0 -0.040612"
+      rpy="-1.5708 -0.41525 -3.1416" />
+    <parent
+      link="link 6" />
+    <child
+      link="actuator support 3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="claw 3-1">
+    <inertial>
+      <origin
+        xyz="0.0105668137070598 0.0376982264529872 0.00407536047864931"
+        rpy="0 0 0" />
+      <mass
+        value="0.0632272465915874" />
+      <inertia
+        ixx="0.000101537790879926"
+        ixy="5.54007575102514E-10"
+        ixz="7.55858106552111E-10"
+        iyy="0.000107693746637804"
+        iyz="1.75235676553741E-06"
+        izz="1.63723150441155E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 3-1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/claw 3-1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw joint 3-1"
+    type="revolute">
+    <origin
+      xyz="-0.078897 -0.072503 0.010564"
+      rpy="0.37873 1.5708 0" />
+    <parent
+      link="actuator support 3" />
+    <child
+      link="claw 3-1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cylynder suport 2">
+    <inertial>
+      <origin
+        xyz="0.101773032186435 9.7648180041876E-08 -1.18473598847979E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0608147218897256" />
+      <inertia
+        ixx="4.27076812708547E-06"
+        ixy="-3.74883013386007E-10"
+        ixz="2.44523496114453E-11"
+        iyy="0.000186634745646111"
+        iyz="-8.58832964089533E-11"
+        izz="0.000185609788208117" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/cylynder suport 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot arm/meshes/cylynder suport 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cy sup 2"
+    type="fixed">
+    <origin
+      xyz="-0.049715 -0.23773 0.055"
+      rpy="0 0 1.8065" />
+    <parent
+      link="link 2" />
+    <child
+      link="cylynder suport 2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
